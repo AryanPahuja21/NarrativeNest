@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startup_draft1/core/theme/theme.dart';
 import 'package:startup_draft1/features/auth/presentation/pages/signup.dart';
 
 void main() {
@@ -14,10 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'School Bus Tracker',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.darkThemeMode,
       home: const SignUpPage(),
     );
   }
