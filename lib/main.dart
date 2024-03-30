@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:startup_draft1/core/theme/theme.dart';
-import 'package:startup_draft1/features/auth/presentation/pages/signup.dart';
+import 'package:startup_draft1/features/auth/presentation/pages/login.dart';
+// import 'package:startup_draft1/features/auth/presentation/pages/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'School Bus Tracker',
       theme: AppTheme.darkThemeMode,
-      home: const SignUpPage(),
+      home: const LoginPage(),
     );
   }
 }
