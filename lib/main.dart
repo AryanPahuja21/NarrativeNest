@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:startup_draft1/core/secrets/app_secrets.dart';
 import 'package:startup_draft1/core/theme/theme.dart';
 import 'package:startup_draft1/features/auth/presentation/pages/login.dart';
-// import 'package:startup_draft1/features/auth/presentation/pages/signup.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+      url: AppSecrets.supabaseUrl, anonKey: AppSecrets.supabaseKey);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
